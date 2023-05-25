@@ -1,0 +1,1091 @@
+@charset "UTF-8";
+/**
+ * Renewed Medieninformatik theme for reveal.js.
+ * This templete file was created to not mess up with the existing presentations
+ * while developing the new theme.
+ *
+ * Copyright (C) 2015 TH Köln http://www.medieninformatik.fh-koeln.de
+ *
+ * Designguide: http://www.medieninformatik.fh-koeln.de/website/general/general/designguide_3/de/de_designguide_articl_1.php
+ */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500|Roboto+Mono");
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+@import "https://fonts.googleapis.com/css?family=PT+Sans:400,700";
+@import "https://fonts.googleapis.com/css?family=Roboto+Slab:400,500|Roboto+Mono";
+:root {
+  --r-background-color: #fff;
+  --r-main-font: PT Sans, Arial, Helvetica, Tahoma, sans-serif;
+  --r-main-font-size: 40px;
+  --r-main-color: #444433;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: League Gothic, Impact, sans-serif;
+  --r-heading-color: #9313CE;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: normal;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 3.77em;
+  --r-heading2-size: 2.11em;
+  --r-heading3-size: 1.55em;
+  --r-heading4-size: 1em;
+  --r-code-font: Fira Code, fontDefault;
+  --r-link-color: #dd1166;
+  --r-link-color-dark: #960c45;
+  --r-link-color-hover: #8BE9FD;
+  --r-selection-background-color: #44475A;
+  --r-selection-color: #fff;
+}
+
+.reveal-viewport {
+  background: #fff;
+  background-color: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h1 {
+  text-shadow: var(--r-heading1-text-shadow);
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.3;
+}
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: var(--r-block-margin) auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: var(--r-block-margin) auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: var(--r-code-font);
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: var(--r-code-font);
+  text-transform: none;
+  tab-size: 2;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal .code-wrapper {
+  white-space: normal;
+}
+
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align=center],
+.reveal table td[align=center] {
+  text-align: center;
+}
+
+.reveal table th[align=right],
+.reveal table td[align=right] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: var(--r-block-margin) 0;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}
+/**
+ * Renewed Medieninformatik theme for reveal.js.
+ * This templete file was created to not mess up with the existing presentations
+ * while developing the new theme.
+ *
+ * Copyright (C) 2015 TH Köln http://www.medieninformatik.fh-koeln.de
+ *
+ * Designguide: http://www.medieninformatik.fh-koeln.de/website/general/general/designguide_3/de/de_designguide_articl_1.php
+ */
+body {
+  background-color: #fbfbfb;
+  background-color: #fbfbfb;
+  background-image: url("../../images/vieldrin-black.png");
+  background-repeat: no-repeat;
+  background-position: 20px 95%;
+  background-size: 15%;
+}
+
+.reveal {
+  font-family: "PT Sans", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #231f20;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal .slides > section {
+  font-weight: inherit;
+  line-height: 1.3;
+}
+.reveal .slides > section > section {
+  font-weight: inherit;
+  line-height: 1.3;
+}
+.reveal .slides img {
+  border: none;
+  box-shadow: none;
+}
+.reveal .slides img[alt=small] {
+  max-width: 10%;
+  max-height: 10%;
+}
+.reveal .slides p {
+  line-height: 140%;
+}
+.reveal .slides li {
+  line-height: 140%;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.reveal .slides li:before {
+  display: inline-block;
+  width: 1.2em;
+  margin-left: -1.2em;
+  content: "#";
+  color: #9313c3;
+}
+.reveal .slides li.numbered:before {
+  content: "#" counter(item, decimal) "";
+  counter-increment: item;
+  margin-right: 0.5rem;
+}
+.reveal .slides th {
+  line-height: 140%;
+}
+.reveal .slides td {
+  line-height: 140%;
+}
+.reveal .slides h2 {
+  color: #d16;
+}
+.reveal .slides h2 strong {
+  color: #000;
+}
+.reveal .slides h1 strong {
+  color: #000;
+}
+.reveal .slides .has-dark-background * {
+  color: #fff;
+}
+.reveal .slides .svg-inline--fa {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  color: #000;
+}
+.reveal .slides .fa {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  color: #000;
+}
+.reveal .slides blockquote {
+  font-style: normal;
+  position: relative;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 30px;
+  color: #fff;
+  border: solid 2px #9313c3;
+  border-radius: 5px;
+  background-color: #9313c3;
+}
+.reveal .slides blockquote:before {
+  content: none;
+}
+.reveal .slides blockquote:after {
+  position: absolute;
+  right: 30px;
+  bottom: -19px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 20px solid #9313c3;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+.reveal .slides blockquote p {
+  margin: 0;
+}
+.reveal .slides .welcome h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+.reveal .slides .welcome h2 {
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+.reveal .slides .interlude h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal .slides .interlude h1 + * {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+}
+.reveal .slides .interlude > * {
+  text-align: center;
+}
+.reveal .slides .interlude h2 + * {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+}
+.reveal .slides .conclusion h1 {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.reveal .slides .conclusion h1 + * {
+  margin-top: 0.5em;
+}
+.reveal .slides .conclusion h2 + * {
+  margin-top: 0.5em;
+}
+.reveal .slides .conclusion li:before {
+  color: #000;
+}
+.reveal .slides .image-fullscreen > * {
+  display: inline-block;
+  padding: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.reveal .slides .image > * {
+  display: inline-block;
+  padding: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.reveal .slides .video > iframe {
+  display: inline-block;
+  padding: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 50vH;
+  padding: 0;
+  margin-top: 1em !important;
+}
+.reveal .slides .image-text {
+  top: 0 !important;
+  background-color: rgba(250, 250, 250, 0.9);
+  padding: 1em;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+.reveal .slides .assignment h1 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.8);
+}
+.reveal .slides .assignment h2 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.8);
+}
+.reveal .slides .assignment > * {
+  margin-left: 30%;
+}
+.reveal .slides .simple h1 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.8);
+}
+.reveal .slides .simple h2 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.8);
+}
+.reveal .slides .explanation h1 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+}
+.reveal .slides .explanation h2 {
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-bottom: 0.5em;
+}
+.reveal .slides .explanation > * {
+  margin-left: 30%;
+}
+.reveal .slides .explanation p {
+  font-size: 0.8em;
+}
+.reveal .slides .explanation td {
+  font-size: 0.8em;
+}
+.reveal .slides .explanation th {
+  font-size: 0.8em;
+}
+.reveal .slides .explanation li {
+  font-size: 0.8em;
+  display: block;
+  margin-bottom: 0.3em;
+}
+.reveal .slides .explanation li:before {
+  display: inline-block;
+  width: 1.2em;
+  margin-left: 0;
+  content: "-";
+  color: #000;
+}
+.reveal .slides .explanation blockquote {
+  font-weight: 100;
+  width: auto;
+  margin-top: 2em;
+  padding: 0;
+  padding-top: 2em;
+  color: #000;
+  border: none;
+  border-top: solid 1px #d16;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.reveal .slides .explanation blockquote:after {
+  content: none;
+  border: none;
+}
+.reveal .slides .explanation blockquote:before {
+  content: none;
+  border: none;
+}
+.reveal .slides .explanation blockquote p {
+  display: inline;
+}
+.reveal h1 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+  font-size: 3.77em;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.reveal h1 strong {
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal h2 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+  font-size: 2.11em;
+}
+.reveal h2 strong {
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal h3 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+  font-size: 1.55em;
+}
+.reveal h3 strong {
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal h4 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+  font-size: 1em;
+}
+.reveal h4 strong {
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal h5 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+}
+.reveal h5 strong {
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal h6 {
+  font-family: "Roboto Slab", Impact, sans-serif;
+  font-weight: 700;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+  letter-spacing: normal;
+  text-transform: normal;
+  word-wrap: break-word;
+  color: #d16;
+  text-shadow: none;
+  display: inline-block;
+  padding: 0 0.2em 0.2em 0.2em;
+  color: #fff;
+  background-color: #000;
+}
+.reveal p {
+  line-height: 1.3;
+  margin: 20px 0;
+}
+.reveal img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  display: block;
+  margin-top: -20px !important;
+  margin-bottom: 20px;
+}
+.reveal video {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  display: block;
+  margin-top: -20px !important;
+  margin-bottom: 20px;
+}
+.reveal iframe {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  display: block;
+  margin-top: -20px !important;
+  margin-bottom: 20px;
+}
+.reveal strong {
+  font-weight: bold;
+}
+.reveal b {
+  font-weight: bold;
+}
+.reveal em {
+  font-style: italic;
+}
+.reveal ol {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  text-align: left;
+  counter-reset: item;
+  list-style-type: none;
+}
+.reveal ol ol {
+  display: block;
+  margin-left: 40px;
+}
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+.reveal dl {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  text-align: left;
+}
+.reveal ul {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  text-align: left;
+  list-style-type: disc;
+}
+.reveal ul ul {
+  list-style-type: square;
+  display: block;
+  margin-left: 40px;
+}
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+.reveal ul ol {
+  display: block;
+  margin-left: 40px;
+}
+.reveal dt {
+  font-weight: bold;
+}
+.reveal dd {
+  margin-left: 40px;
+}
+.reveal q {
+  quotes: none;
+  font-style: italic;
+}
+.reveal blockquote {
+  quotes: none;
+  font-style: italic;
+  position: relative;
+  display: block;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.reveal blockquote p:first-child {
+  display: inline-block;
+}
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+.reveal pre {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  word-wrap: break-word;
+  border-top: dotted 1px #ddd;
+  border-bottom: dotted 1px #ddd;
+}
+.reveal pre code {
+  font-family: "Roboto Mono", monospace;
+  display: block;
+  overflow: auto;
+  max-height: 400px;
+  padding: 1em;
+  word-wrap: normal;
+}
+.reveal code {
+  font-family: monospace;
+}
+.reveal table {
+  margin: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.reveal table th {
+  font-weight: bold;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+.reveal table td {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+.reveal table th[align=center] {
+  text-align: center;
+}
+.reveal table td[align=center] {
+  text-align: center;
+}
+.reveal table th[align=right] {
+  text-align: right;
+}
+.reveal table td[align=right] {
+  text-align: right;
+}
+.reveal table tbody tr:last-child th {
+  border-bottom: none;
+}
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+.reveal sup {
+  vertical-align: super;
+}
+.reveal sub {
+  vertical-align: sub;
+}
+.reveal small {
+  font-size: 0.6em;
+  line-height: 1.2em;
+  display: inline-block;
+  vertical-align: top;
+}
+.reveal small * {
+  vertical-align: top;
+}
+.reveal a {
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+  text-decoration: none;
+  color: #4952e1;
+}
+.reveal a:hover {
+  color: #a1a5ef;
+  border: none;
+  text-shadow: none;
+}
+.reveal a:hover img {
+  border-color: #4952e1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+.reveal .roll span:after {
+  color: #fff;
+  background: #1f29be;
+}
+.reveal section img {
+  margin: 15px 0;
+  border: 4px solid #231f20;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none;
+}
+.reveal .controls {
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.reveal .controls .navigate-left {
+  border-right-color: #4952e1;
+  border-color: transparent !important;
+  top: 30px;
+  left: 5px;
+}
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #4952e1;
+}
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #a1a5ef;
+}
+.reveal .controls .navigate-right {
+  border-left-color: #4952e1;
+  border-color: transparent !important;
+  top: 30px;
+  left: 60px;
+}
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #4952e1;
+}
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #a1a5ef;
+}
+.reveal .controls .navigate-up {
+  border-bottom-color: #4952e1;
+  border-color: transparent !important;
+  top: 2px;
+  left: 30px;
+}
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #4952e1;
+}
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #a1a5ef;
+}
+.reveal .controls .navigate-down {
+  border-top-color: #4952e1;
+  border-color: transparent !important;
+  top: 55px;
+  left: 30px;
+}
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #4952e1;
+}
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #a1a5ef;
+}
+.reveal .controls button {
+  position: absolute;
+  height: 20px;
+  opacity: 1;
+  border: 0;
+}
+.reveal .controls button[disabled] {
+  opacity: 0.3;
+}
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  height: 10px;
+}
+.reveal .progress span {
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  background: #4952e1;
+  background-color: #9313c3;
+}
+.reveal .slide-background.image {
+  background-size: contain;
+}
+.reveal .slide-background.image-text {
+  background-size: contain;
+}
+
+*::selection {
+  color: #fff;
+  background: #7c0;
+  text-shadow: none;
+}
+
+*::-moz-selection {
+  color: #fff;
+  background: #7c0;
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*::before {
+  box-sizing: inherit;
+}
+
+*::after {
+  box-sizing: inherit;
+}
+
+.reveal.has-dark-background .controls button {
+  color: #fff !important;
+}
+.reveal.has-dark-background .controls button[disabled] {
+  opacity: 0.3;
+}
+
+span.cite {
+  color: grey;
+  font-size: 16px;
+  display: block;
+}
+
+div.speaker-controls-notes li {
+  font-size: 2.4vh;
+}
+
+div.media {
+  padding: 16px;
+}
+div.media div.center {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
