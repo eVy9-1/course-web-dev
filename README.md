@@ -1,5 +1,8 @@
 # 🔮 Web-Dev Crash Course
 
+[![GitHub stars](https://img.shields.io/github/stars/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/network/members)
+
 ## 📝 Beschreibung
 
 In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung beschäftigen. Wir werden uns mit den Grundlagen der Rechnerarchitektur, Betriebssystemen, Netzwerken, Protokollen, Datenbanken, Programmiersprachen und Webservern beschäftigen. Wir werden uns mit den Grundlagen von HTML, CSS und JavaScript beschäftigen und diese dann eventuell mit einem Server verbinden. Am Ende des Kurses sollte jeder Teilnehmer in der Lage sein, die Zusammenhänge zwischen den einzelnen Komponenten zu verstehen und eine einfache Webseite aus HTML, CSS und JavaScript zu erstellen.
