@@ -22,7 +22,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 1 - Einführung in Computer und deren Kommunikation miteinander </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-01.html)
+[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-01/)
 
 ## Einführung in die Rechnerarchitektur:
 
@@ -75,7 +75,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 2 - Internet Protokolle und HTML </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-02.html)
+[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-02/)
 
 ## Protokolle (HTTP, SSH, HTTPS, SSL)
 
@@ -117,7 +117,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 3 - Alles hübscher machen mit CSS </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-03.html)
+[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-03/)
 
 ## CSS
 
@@ -145,7 +145,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 4 - Funktionale Webseiten mit JavaScript </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-04.html)
+[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-04/)
 
 ## JavaScript
 
@@ -174,7 +174,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 5 - Let's get professional </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-05.html)
+[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-05/)
 
 ## Datenbanken (SQL)
 
