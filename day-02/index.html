@@ -1,44 +1,395 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Crash Course - Tag 2</title>
-	<link rel="icon" type="image/x-icon" href="https://www.medieninformatik.th-koeln.de/favicons/favicon.ico">
+    <title>Crash Course - Tag 2</title>
+    <link rel="icon" type="image/x-icon" href="https://www.medieninformatik.th-koeln.de/favicons/favicon.ico">
 
-	<link rel="stylesheet" href="../dist/reset.css">
-	<link rel="stylesheet" href="../dist/reveal.css">
-	<link rel="stylesheet" href="https://kit.fontawesome.com/2365a6ff25.css" crossorigin="anonymous">
-	<link rel="stylesheet" href="../dist/theme/th-koeln-medieninformatik-improved.css">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2365a6ff25.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dist/theme/th-koeln-medieninformatik-improved.css">
 
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/dracula.css">
 </head>
 <body>
 <div class="reveal">
-	<div class="slides">
-		<section data-background-color="#9313CE" class="outro center">
-			<h1>Thema</h1>
-			<h2>Internet Protokolle und HTML</h2>
-			<p>von</p>
-			<h3>Joel Maximilian Mai</h3>
-			<p>am</p>
-			<h3>13.05.2023</h3>
-		</section>
+    <div class="slides">
+        <section data-background-color="#9313CE" class="outro center">
+            <h1>Thema</h1>
+            <h2>Internet Protokolle und HTML</h2>
+            <p>von</p>
+            <h3>Joel Maximilian Mai</h3>
+            <p>am</p>
+            <h3>13.05.2023</h3>
+        </section>
 
-		<section>
-			<h2></h2>
-			<ul>
-				<li></li>
-			</ul>
-		</section>
+        <section>
 
-		<section>
-			<h2>Vielen Dank für deine Aufmerksamkeit!</h2>
-			<p>Joel Maximilian Mai</p>
-		</section>
-	</div>
+            <section>
+                <h2>Protokolle (HTTP, SSH, HTTPS, SSL)</h2>
+                <p>Protokolle definieren, wie Daten über ein Netzwerk gesendet und empfangen werden. Sie legen die
+                    Regeln und Standards fest, die Computer befolgen müssen, um miteinander zu kommunizieren.</p>
+            </section>
+
+            <section>
+                <h2>SSH Verbindungen</h2>
+                <p>SSH (Secure Shell) ist ein Protokoll, das eine sichere Verbindung über ein unsicheres Netzwerk
+                    ermöglicht. Es wird häufig verwendet, um sichere Fernzugriffe auf Server zu ermöglichen und sichere
+                    Dateiübertragungen durchzuführen.</p>
+            </section>
+
+            <section>
+                <h2>FTP und SFTP</h2>
+                <p>FTP (File Transfer Protocol) ist ein Standardprotokoll für die Übertragung von Dateien von einem Host
+                    zu einem anderen über ein Netzwerk. SFTP (SSH File Transfer Protocol) ist eine sichere Variante von
+                    FTP, die die Datenübertragung über eine SSH-Verbindung ermöglicht.</p>
+            </section>
+
+            <section>
+                <h2>HTTP</h2>
+                <p>HTTP (Hypertext Transfer Protocol) ist das Protokoll, das für die Übertragung von Daten über das Web
+                    verwendet wird, insbesondere für HTML-Dokumente. Es definiert, wie Nachrichten formatiert und
+                    übertragen werden, und welche Aktionen Webserver und Browser in Reaktion auf verschiedene Befehle
+                    unternehmen sollten.</p>
+            </section>
+
+            <section>
+                <h2>HTTPS</h2>
+                <p>HTTPS (Hypertext Transfer Protocol Secure) ist die sichere Version von HTTP. Es verwendet SSL/TLS, um
+                    eine sichere Verbindung zu gewährleisten und Daten zu verschlüsseln, die zwischen dem Client und dem
+                    Server ausgetauscht werden.</p>
+            </section>
+
+            <section>
+                <h2>REST (GET, POST, ...) und Status Codes (404)</h2>
+                <p>REST (Representational State Transfer) ist ein Architekturstil für die Erstellung von Webdiensten.
+                    RESTful Webdienste verwenden HTTP-Methoden wie GET (Abrufen von Ressourcen), POST (Erstellen von
+                    Ressourcen), PUT (Aktualisieren von Ressourcen) und DELETE (Löschen von Ressourcen).
+                    HTTP-Statuscodes, wie 404 (Nicht gefunden), liefern Informationen über den Status der Anfrage.</p>
+            </section>
+
+            <section>
+                <h2>HEADER und BODY in einem Request/Response</h2>
+                <p>Ein HTTP-Request und -Response bestehen aus einem Header und einem Body. Der Header enthält
+                    Metainformationen wie die HTTP-Methode, die URL, den Statuscode und andere Steuerinformationen. Der
+                    Body enthält die tatsächlichen Daten (wie HTML-Code oder Formulardaten), die gesendet oder empfangen
+                    werden.</p>
+            </section>
+
+            <section>
+                <h2>SSL</h2>
+                <p>SSL (Secure Sockets Layer) ist ein Standardprotokoll für die Sicherung der Netzwerkkommunikation. Es
+                    verwendet Verschlüsselungstechnologien, um die Daten, die zwischen Servern und Clients ausgetauscht
+                    werden, zu schützen. HTTPS ist eine Implementierung von SSL.</p>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>Monolithische Systeme</h2>
+                <p>Ein monolithisches System ist eine einheitliche Software, in der alle Komponenten eng miteinander
+                    verknüpft sind und gemeinsam als ein einziges, unteilbares System arbeiten. Alle Komponenten, von
+                    der Benutzeroberfläche bis zur Datenverarbeitung, sind in einem einzigen Codebase zusammengefasst
+                    und führen auf einem einzigen Server oder Prozess aus.</p>
+            </section>
+
+            <section>
+                <h2>Microservices</h2>
+                <p>Microservices hingegen sind ein Architekturstil, bei dem eine Anwendung als Sammlung kleiner,
+                    unabhängiger und modularer Dienste entwickelt wird. Jeder dieser Dienste führt eine bestimmte
+                    Geschäftsfunktion aus und kann unabhängig von den anderen entwickelt, bereitgestellt und skaliert
+                    werden.</p>
+            </section>
+
+            <section>
+                <h2>Monolithische Systeme vs. Microservices: Vor- und Nachteile</h2>
+                <p>Monolithische Systeme können einfacher zu entwickeln und zu testen sein, da alles in einem einzigen
+                    Codebase liegt. Allerdings können sie mit zunehmender Größe schwieriger zu verstehen, zu warten und
+                    zu skalieren sein. </p>
+                <p>Microservices bieten hingegen eine bessere Modularität und Skalierbarkeit und können eine schnellere
+                    Entwicklung und Bereitstellung ermöglichen, da einzelne Dienste unabhängig voneinander entwickelt
+                    und aktualisiert werden können. Allerdings können sie komplexer in Bezug auf die Verwaltung und
+                    Koordination der einzelnen Dienste sein und erfordern ein robustes Infrastrukturmanagement.</p>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>HTML - Head (Meta Daten)</h2>
+                <p>Der HTML &lt;head&gt;-Bereich eines Dokuments enthält Metainformationen über das Dokument selbst und
+                    keine Inhalte, die für den Benutzer sichtbar sind. Es enthält Elemente wie den Titel des Dokuments,
+                    Verweise auf Stylesheets und Skripte und verschiedene Metatags.</p>
+                <pre>
+										<code>
+												&lt;!DOCTYPE html&gt;
+												&lt;html&gt;
+														&lt;head&gt;
+																&lt;title&gt;Seitentitel&lt;/title&gt;
+														&lt;/head&gt;
+														&lt;body&gt;
+																...
+														&lt;/body&gt;
+												&lt;/html&gt;
+										</code>
+    						</pre>
+            </section>
+
+            <section>
+                <h2>HTML Tags (lang, dir und item-type)</h2>
+                <p>Das &lt;html&gt;-Tag ist das Wurzelelement eines HTML-Dokuments. Es kann Attribute wie `lang` (für
+                    die Sprache des Dokuments) und `dir` (für die Textrichtung) haben.</p>
+                <pre>
+										<code>
+												&lt;!DOCTYPE html&gt;
+												&lt;html lang="de" dir="ltr"&gt;
+														...
+												&lt;/html&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Meta Tags</h2>
+                <p>Meta-Tags liefern Informationen über das HTML-Dokument, die für Suchmaschinen und Browser nützlich
+                    sein können. Sie sind im &lt;head&gt;-Bereich des Dokuments platziert.</p>
+                <pre>
+										<code>
+												&lt;meta charset="UTF-8"&gt;
+												&lt;meta name="description" content="Eine Beschreibung der Seite"&gt;
+												&lt;meta name="keywords" content="Schlüsselwörter, für, Suche"&gt;
+												&lt;meta name="author" content="Autor Name"&gt;
+												&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Style / Link to Stylesheet</h2>
+                <p>Styles können im HTML-Dokument selbst mit dem &lt;style&gt;-Tag definiert werden, oder sie können aus
+                    einer externen CSS-Datei geladen werden, die mit dem &lt;link&gt;-Tag verknüpft ist.</p>
+                <pre>
+										<code>
+												&lt;style&gt;
+														body { background-color: lightblue; }
+												&lt;/style&gt;
+												&lt;link rel="stylesheet" href="styles.css"&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Script</h2>
+                <p>JavaScript kann im HTML-Dokument selbst mit dem &lt;script&gt;-Tag definiert werden, oder es kann aus
+                    einer externen JS-Datei geladen werden.</p>
+                <pre>
+										<code>
+												&lt;script&gt;
+														function myFunction() {
+															alert("Hallo Welt!");
+														}
+												&lt;/script&gt;
+												&lt;script src="script.js"&gt;&lt;/script&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Title</h2>
+                <p>Das &lt;title&gt;-Tag definiert den Titel des Dokuments. Dieser Titel wird auf der Registerkarte des
+                    Browsers angezeigt und von Suchmaschinen verwendet.</p>
+                <pre>
+										<code>
+										 		&lt;title&gt;Meine Webseite&lt;/title&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Open Graph Meta Tags für Facebook</h2>
+                <p>Open Graph ist ein Protokoll, das von Facebook entwickelt wurde, um Informationen aus deiner Webseite in sozialen Netzwerken zu teilen. Hier sind einige Beispiele für Open Graph Meta Tags:</p>
+                <pre>
+										<code>
+												&lt;meta property="og:title" content="Titel deiner Webseite" /&gt;
+												&lt;meta property="og:description" content="Beschreibung deiner Webseite" /&gt;
+												&lt;meta property="og:image" content="URL zum Thumbnail Bild" /&gt;
+												&lt;meta property="og:url" content="URL der Seite" /&gt;
+												&lt;meta property="og:type" content="Typ der Seite (z.B. Webseite, Artikel etc.)" /&gt;
+										</code>
+								</pre>
+            </section>
+
+            <section>
+                <h2>Twitter Cards</h2>
+                <p>Twitter Cards werden verwendet, um das Teilen von Links auf Twitter zu verbessern. Sie ermöglichen es dir, Überschriften, Beschreibungen und Bilder zu den Links hinzuzufügen, die du teilst. Hier sind einige Beispiele für Twitter Card Meta Tags:</p>
+                <pre>
+										<code>
+										&lt;meta name="twitter:card" content="Typ der Card (z.B. Zusammenfassung, großer Bild)" /&gt;
+										&lt;meta name="twitter:site" content="@deinTwitterBenutzername" /&gt;
+										&lt;meta name="twitter:title" content="Titel der Seite" /&gt;
+										&lt;meta name="twitter:description" content="Beschreibung der Seite" /&gt;
+										&lt;meta name="twitter:image" content="URL zum Thumbnail Bild" /&gt;
+										</code>
+								</pre>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>HTML - Body</h2>
+                <p>Der &lt;body&gt; eines HTML-Dokuments enthält den Hauptinhalt, der den Benutzern der Webseite angezeigt wird. Alle Texte, Bilder, Links, Formulare und andere Inhalte, die Sie auf Ihrer Webseite anzeigen möchten, sollten innerhalb des &lt;body&gt;-Tags stehen.</p>
+                <pre><code>
+                &lt;body&gt;
+                    &lt;p&gt;Das ist ein Absatz.&lt;/p&gt;
+                &lt;/body&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>h1 - hn</h2>
+                <p>Die &lt;h1&gt; bis &lt;h6&gt; Tags werden verwendet, um Überschriften verschiedener Ebenen zu definieren, wobei &lt;h1&gt; die höchste und &lt;h6&gt; die niedrigste Ebene ist. Überschriften helfen, den Inhalt Ihrer Webseite zu strukturieren und sind wichtig für die Suchmaschinenoptimierung.</p>
+                <pre><code>
+                &lt;h1&gt;Das ist eine H1 Überschrift&lt;/h1&gt;
+                &lt;h2&gt;Das ist eine H2 Überschrift&lt;/h2&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>p, ul/li und ol/li</h2>
+                <p>Das &lt;p&gt; Tag definiert einen Absatz. Die Tags &lt;ul&gt; (unordered list) und &lt;ol&gt; (ordered list) definieren Listen, wobei die &lt;li&gt; (list item) Tags die einzelnen Listenelemente darstellen.</p>
+                <pre><code>
+                &lt;p&gt;Das ist ein Absatz.&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Das ist ein Listenelement.&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Das ist ein numeriertes Listenelement.&lt;/li&gt;
+                &lt;/ol&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>a href und id</h2>
+                <p>Das &lt;a&gt; Tag definiert einen Hyperlink, mit dem Benutzer zu anderen Webseiten, zu bestimmten Abschnitten innerhalb derselben Webseite oder zu anderen Ressourcen navigieren können. Das Attribut href gibt die URL des Ziels an, während das Attribut id einen eindeutigen Bezeichner für ein Element definiert.</p>
+                <pre><code>
+                &lt;a href="https://example.com" id="link1"&gt;Das ist ein Link.&lt;/a&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>img und source set</h2>
+                <p>Das &lt;img&gt; Tag wird verwendet, um ein Bild in einem HTML-Dokument anzuzeigen. Das srcset Attribut kann verwendet werden, um verschiedene Bilder für verschiedene Geräte oder Bildschirmauflösungen anzugeben.</p>
+                <pre><code>
+                &lt;img src="image.jpg" alt="Bildbeschreibung"&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>div und tables</h2>
+                <p>Das &lt;div&gt; Tag wird verwendet, um einen Bereich oder eine Sektion in einem HTML-Dokument zu definieren. Das &lt;table&gt; Tag wird verwendet, um tabellarische Daten anzuzeigen.</p>
+                <pre><code>
+                &lt;div&gt;
+                    &lt;p&gt;Das ist ein Absatz innerhalb eines Div.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Das ist eine Zelle in einer Tabelle.&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Form tags</h2>
+                <p>Formular-Tags wie &lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;, &lt;button&gt;, und andere werden verwendet, um Formulare zu erstellen, mit denen Benutzer Informationen eingeben können.</p>
+                <pre><code>
+                &lt;form action="/submit"&gt;
+                    &lt;label for="name"&gt;Name:&lt;/label&gt;
+                    &lt;input type="text" id="name" name="name"&gt;
+                    &lt;input type="submit" value="Submit"&gt;
+                &lt;/form&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>And more (article, header, footer, aside)</h2>
+                <p>HTML5 führte eine Reihe von semantischen Tags ein, wie &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;section&gt;, und andere, um den Inhalt einer Webseite besser zu strukturieren und zu beschreiben.</p>
+                <pre><code>
+                &lt;article&gt;
+                    &lt;header&gt;
+                        &lt;h1&gt;Artikelüberschrift&lt;/h1&gt;
+                    &lt;/header&gt;
+                    &lt;p&gt;Das ist der Inhalt des Artikels.&lt;/p&gt;
+                    &lt;footer&gt;
+                        &lt;p&gt;Das ist der Footer des Artikels.&lt;/p&gt;
+                    &lt;/footer&gt;
+                &lt;/article&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Semantic Web</h2>
+                <p>Das Semantic Web ist ein Konzept, das von der W3C entwickelt wurde, um Bedeutungen zu den Inhalten im Web hinzuzufügen, um sie besser durchsuchbar und organisierbar zu machen. HTML5-Semantik ist ein Teil davon, aber es umfasst auch andere Technologien und Standards wie RDF, OWL, und SPARQL.</p>
+            </section>
+
+            <section>
+                <h2>Semantic Web - Beispiele</h2>
+                <p>Das Semantic Web ist ein Ansatz zur Organisation und Interpretation von Webinhalten, der die maschinelle Lesbarkeit und Verarbeitung von Webinformationen verbessert. Durch den Einsatz von semantischen Technologien können Informationen auf Webseiten mit Bedeutungen versehen werden, die von Maschinen verstanden werden können.</p>
+
+                <p>Ein Beispiel dafür ist die Verwendung von strukturierten Daten in Form von JSON-LD oder Mikroformaten, die Informationen auf einer Webseite in einem Format präsentieren, das für Maschinen leicht verständlich ist. Sie können verwendet werden, um Informationen wie Produktbewertungen, Unternehmenskontaktinformationen, Veranstaltungsdetails und vieles mehr darzustellen. Suchmaschinen und andere Dienste können diese Informationen dann nutzen, um erweiterte Ergebnisse und Funktionalitäten bereitzustellen.</p>
+
+                <pre><code>
+                &lt;script type="application/ld+json"&gt;
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Product",
+                    "name": "Beispielprodukt",
+                    "image": "https://example.com/photos/1x1/photo.jpg",
+                    "description": "Eine Beschreibung des Produkts.",
+                    "brand": {
+                        "@type": "Brand",
+                        "name": "Beispielmarke"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "4.4",
+                        "reviewCount": "89"
+                    }
+                }
+                &lt;/script&gt;
+                </code></pre>
+            </section>
+
+            <section>
+                <p>Ein anderes Beispiel ist die Verwendung von RDFa oder Resource Description Framework in Attributes, um semantische Auszeichnungen direkt in das HTML zu integrieren. RDFa ermöglicht es Webentwicklern, Metadaten in ihre Webseiten einzubetten, die die Beziehungen zwischen einzelnen Elementen und ihre Bedeutungen beschreiben.</p>
+
+                <pre><code>
+                &lt;div vocab="https://schema.org/" typeof="Product"&gt;
+                    &lt;img property="image" src="https://example.com/photos/1x1/photo.jpg" /&gt;
+                    &lt;span property="name"&gt;Beispielprodukt&lt;/span&gt;
+                    &lt;span property="brand"&gt;Beispielmarke&lt;/span&gt;
+                    &lt;span property="description"&gt;Eine Beschreibung des Produkts.&lt;/span&gt;
+                &lt;/div&gt;
+                </code></pre>
+            </section>
+
+
+        </section>
+
+        <section>
+            <h2>Vielen Dank für deine Aufmerksamkeit!</h2>
+            <p>Joel Maximilian Mai</p>
+        </section>
+    </div>
 </div>
 
 <script src="../dist/reveal.js"></script>
@@ -50,15 +401,15 @@
 <script src="https://kit.fontawesome.com/2365a6ff25.js" crossorigin="anonymous"></script>
 
 <script>
-	// Keyboard options enable presenter stick to work
-	Reveal.initialize({
-		hash: true,
-		keyboard: {
-			39: 'next',
-			37: 'prev'
-		},
-		plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-	});
+  // Keyboard options enable presenter stick to work
+  Reveal.initialize({
+    hash: true,
+    keyboard: {
+      39: 'next',
+      37: 'prev'
+    },
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
 </script>
 </body>
 </html>
