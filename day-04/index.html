@@ -28,10 +28,233 @@
 		</section>
 
 		<section>
-			<h2></h2>
-			<ul>
-				<li></li>
-			</ul>
+
+			<section>
+				<h2>JavaScript</h2>
+				<p>JavaScript ist eine populäre, leistungsstarke und flexible Programmiersprache, die hauptsächlich in Webbrowsern verwendet wird, um interaktive Webseiten und Webanwendungen zu erstellen. JavaScript ermöglicht es Entwicklern, Benutzerinteraktionen zu steuern, dynamische Inhalte zu erstellen, Multimedia zu handhaben, animierte Grafiken zu erstellen und vieles mehr.</p>
+				<p>JavaScript ist ereignisbasiert, das heißt, es kann auf Benutzeraktionen wie Klicks, Mausbewegungen und Tastatureingaben reagieren. Es ist eine Interpretiersprache, was bedeutet, dass der Code in Echtzeit ausgeführt wird, ohne dass er zuvor in eine Maschinensprache übersetzt werden muss. JavaScript unterstützt auch das Objekt-orientierte Programmierparadigma, was es zu einer vielseitigen Sprache für die Webentwicklung macht.</p>
+			</section>
+
+			<section>
+				<h2>Var, Let und Const in JavaScript</h2>
+				<p>`var`, `let` und `const` sind drei Möglichkeiten, Variablen in JavaScript zu deklarieren. Jede hat ihre eigenen Merkmale und Verwendungsfälle.</p>
+			</section>
+
+			<section>
+				<h2>Var in JavaScript</h2>
+				<p>`var` wird verwendet, um eine variable Variable zu deklarieren. Es hat eine Funktionsscope und kann durch Re-Deklaration und Aktualisierung geändert werden.</p>
+				<pre><code>
+				var x = 1;
+				if (true) {
+						var x = 2;  // Same variable!
+						console.log(x);  // 2
+				}
+				console.log(x);  // 2
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Let in JavaScript</h2>
+				<p>`let` ermöglicht es Ihnen, Variablen zu deklarieren, die auf den Block, die Anweisung oder den Ausdruck beschränkt sind, in dem sie verwendet werden. Dies wird als Block-Scope bezeichnet. Anders als `var` kann `let` nicht in demselben Scope oder Block re-deklariert werden.</p>
+				<pre><code>
+				let y = 1;
+				if (true) {
+						let y = 2;  // Different variable
+						console.log(y);  // 2
+				}
+				console.log(y);  // 1
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Const in JavaScript</h2>
+				<p>`const` wird verwendet, um eine Konstante zu deklarieren, deren Wert nicht geändert werden kann. Es hat auch einen Block-Scope, ähnlich wie `let`. Sobald eine `const` Variable zugewiesen wurde, kann sie weder re-deklariert noch neu zugewiesen werden.</p>
+				<pre><code>
+				const z = 1;
+				// z = 2;  // Error: Assignment to constant variable
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Global vs. Local Scope in JavaScript</h2>
+				<p>In JavaScript kann eine Variable entweder einen globalen oder einen lokalen Scope haben. Globale Variablen sind Variablen, die außerhalb von Funktionen oder Blöcken deklariert werden und in der gesamten Anwendung zugänglich sind. Lokale Variablen werden innerhalb von Funktionen oder Blöcken deklariert und können nur innerhalb dieser Funktion oder dieses Blocks zugegriffen werden.</p>
+				<pre><code>
+				var globalVar = "I am global!";  // Global variable
+
+				function test() {
+						var localVar = "I am local!";  // Local variable
+						console.log(globalVar);  // I am global!
+						console.log(localVar);  // I am local!
+				}
+
+				test();
+				console.log(globalVar);  // I am global!
+				// console.log(localVar);  // Error: localVar is not defined
+				</code></pre>
+			</section>
+
+		</section>
+
+		<section>
+
+			<section>
+				<h3>Query Selector</h3>
+				<pre><code>
+				// Einzelnes Element auswählen
+				const element = document.querySelector('.myClass');
+
+				// Liste von Elementen auswählen
+				const elements = document.querySelectorAll('.myClass');
+				</code></pre>
+			</section>
+
+			<section>
+
+			<h3>OnClick Event</h3>
+				<pre><code>
+				const button = document.querySelector('button');
+				button.onclick = function() {
+					alert('Button geklickt!');
+				};
+				</code></pre>
+			</section>
+
+			<section>
+
+			<h3>Funktionen</h3>
+				<pre><code>
+				function sayHello(name) {
+					console.log('Hallo ' + name);
+				}
+
+				sayHello('Max');
+				</code></pre>
+			</section>
+
+			<section>
+
+			<h3>Alert, Prompt, Confirm</h3>
+				<pre><code>
+				// Alert
+				alert('Dies ist ein Alert.');
+
+				// Prompt
+				const name = prompt('Gib deinen Namen ein');
+				console.log(name);
+
+				// Confirm
+				const confirmValue = confirm('Bist du sicher?');
+				console.log(confirmValue);
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>For-Schleifen in JavaScript</h2>
+				<p>Die For-Schleife ist eine der häufigsten Arten von Schleifen in JavaScript. Sie ist nützlich, wenn man genau weiß, wie oft man einen Codeblock wiederholen möchte. Sie besteht aus drei Teilen: der Initialisierung, der Bedingung und der Endausdruck.</p>
+				<pre><code>
+				// Ein einfaches For-Schleifen-Beispiel
+				for (let i = 0; i < 5; i++) {
+						console.log(i);
+				}
+				// Das wird die Zahlen 0 bis 4 ausgeben
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>For...in und For...of Schleifen in JavaScript</h2>
+				<p>JavaScript bietet auch spezielle For-Schleifen, um durch die Eigenschaften eines Objekts (`for...in`) oder die Elemente eines iterierbaren Objekts wie einem Array (`for...of`) zu iterieren.</p>
+				<pre><code>
+				// For...in Schleife
+				let obj = {a: 1, b: 2, c: 3};
+				for (let prop in obj) {
+						console.log(prop + ": " + obj[prop]);
+				}
+
+				// For...of Schleife
+				let arr = ['a', 'b', 'c'];
+				for (let value of arr) {
+						console.log(value);
+				}
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>While-Schleifen in JavaScript</h2>
+				<p>Die While-Schleife ist eine andere Art von Schleife in JavaScript. Sie wird verwendet, wenn man nicht genau weiß, wie oft der Code ausgeführt werden soll, aber eine Bedingung zum Beenden der Schleife hat.</p>
+				<pre><code>
+				// Ein einfaches While-Schleifen-Beispiel
+				let i = 0;
+				while (i < 5) {
+						console.log(i);
+						i++;
+				}
+				// Das wird die Zahlen 0 bis 4 ausgeben
+				</code></pre>
+			</section>
+
+			<section>
+				<h2>Do-While-Schleifen in JavaScript</h2>
+				<p>Die Do-While-Schleife ist eine Variante der While-Schleife, die den Codeblock mindestens einmal ausführt, bevor die Bedingung überprüft wird.</p>
+				<pre><code>
+				// Ein einfaches Do-While-Schleifen-Beispiel
+				let i = 0;
+				do {
+						console.log(i);
+						i++;
+				} while (i < 5);
+				// Das wird die Zahlen 0 bis 4 ausgeben
+				</code></pre>
+			</section>
+
+		</section>
+
+		<section>
+
+			<section>
+				<h2>💫 Crash Course - NPM: HTML, CSS, Javascript vereinigen</h2>
+				<p>npm (Node Package Manager) ist ein Paketmanager für JavaScript und hilft bei der Verwaltung von Abhängigkeiten in Projekten. Es ist nützlich zum Kompilieren, Bundling und Minifizieren von HTML, CSS und JavaScript-Dateien.</p>
+			</section>
+
+			<section>
+				<h2>💫 Wie amazing ist Webpack, Grunt und Gulp</h2>
+				<p>Webpack, Grunt und Gulp sind Werkzeuge, die bei der Automatisierung von Entwicklungsaufgaben helfen, wie z.B. das Bündeln und Minifizieren von Code, das Kompilieren von Code, das Automatisieren von Tests und vieles mehr. Sie tragen wesentlich zur Effizienz und Produktivität bei.</p>
+			</section>
+
+			<section>
+				<h2>💫 Crash Course - Git</h2>
+				<p>Git ist ein Versionskontrollsystem, das von Entwicklern zur Nachverfolgung von Änderungen im Code und zur Zusammenarbeit in Teams verwendet wird. Es ermöglicht es mehreren Entwicklern, an einem Projekt zu arbeiten, ohne sich gegenseitig zu stören.</p>
+			</section>
+
+			<section>
+				<h2>💫 Wie arbeiten Entwickler eigentlich organisiert und nachhaltig am selben Projekt</h2>
+				<p>Entwickler arbeiten in der Regel in Teams und verwenden Versionskontrollsysteme wie Git. Sie verwenden auch Projektmanagement-Tools und -methoden, wie z.B. Scrum oder Kanban, um ihre Arbeit zu organisieren und zu verfolgen.</p>
+			</section>
+
+			<section>
+				<h2>💫 APIs am Beispiel eines NodeJS Servers</h2>
+				<p>APIs (Application Programming Interfaces) ermöglichen es verschiedenen Softwarekomponenten, miteinander zu interagieren. In einem NodeJS-Server kann man APIs verwenden, um Daten abzurufen, zu erstellen, zu ändern oder zu löschen.</p>
+			</section>
+
+			<section>
+				<h2>💫 Einfache Anfragen per Request und Response</h2>
+				<p>In einem NodeJS-Server kann man HTTP-Requests und -Responses verwenden, um mit anderen APIs zu kommunizieren. Ein Request enthält Informationen, die an den Server gesendet werden, während eine Response die Daten enthält, die der Server zurücksendet.</p>
+			</section>
+
+		</section>
+
+		<section>
+
+			<section>
+				<h2>Eure Aufgabe heute:</h2>
+				<p>
+					Nutzt den Script Tag um einen Alert auf eurer Seite von Gestern einzubauen.
+					<br>
+					Lagert ein Skript in eine eigene Datei aus und bindet diese ein.
+					<br>
+					Kombiniert CSS und JavaScript um ein sogenanntes DropDown Menu zu bauen.
+				</p>
+			</section>
+
 		</section>
 
 		<section>
