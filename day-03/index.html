@@ -1,44 +1,453 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Crash Course - Tag 3</title>
-	<link rel="icon" type="image/x-icon" href="https://www.medieninformatik.th-koeln.de/favicons/favicon.ico">
+    <title>Crash Course - Tag 3</title>
+    <link rel="icon" type="image/x-icon" href="https://www.medieninformatik.th-koeln.de/favicons/favicon.ico">
 
-	<link rel="stylesheet" href="../dist/reset.css">
-	<link rel="stylesheet" href="../dist/reveal.css">
-	<link rel="stylesheet" href="https://kit.fontawesome.com/2365a6ff25.css" crossorigin="anonymous">
-	<link rel="stylesheet" href="../dist/theme/th-koeln-medieninformatik-improved.css">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/2365a6ff25.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dist/theme/th-koeln-medieninformatik-improved.css">
 
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="../plugin/highlight/dracula.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/dracula.css">
 </head>
 <body>
 <div class="reveal">
-	<div class="slides">
-		<section data-background-color="#9313CE" class="outro center">
-			<h1>Thema</h1>
-			<h2>Alles hübscher machen mit CSS</h2>
-			<p>von</p>
-			<h3>Joel Maximilian Mai</h3>
-			<p>am</p>
-			<h3>14.05.2023</h3>
-		</section>
+    <div class="slides">
+        <section data-background-color="#9313CE" class="outro center">
+            <h1>Thema</h1>
+            <h2>Alles hübscher machen mit CSS</h2>
+            <p>von</p>
+            <h3>Joel Maximilian Mai</h3>
+            <p>am</p>
+            <h3>14.05.2023</h3>
+        </section>
 
-		<section>
-			<h2></h2>
-			<ul>
-				<li></li>
-			</ul>
-		</section>
+        <section>
+            <h2>CSS</h2>
+            <p>CSS steht für Cascading Style Sheets und ist eine Stylesheet-Sprache, die zum Beschreiben des Aussehens
+                und der Formatierung eines Dokuments, das in einer Auszeichnungssprache wie HTML geschrieben ist,
+                verwendet wird. CSS hilft uns, das Design unserer Webseiten zu steuern und zu gestalten.</p>
+        </section>
 
-		<section>
-			<h2>Vielen Dank für deine Aufmerksamkeit!</h2>
-			<p>Joel Maximilian Mai</p>
-		</section>
-	</div>
+				<section>
+
+						<section>
+								<h2>Tags, Classes, Ids, Attributes</h2>
+								<p>In CSS können wir Styles auf verschiedene Weisen anwenden: auf HTML-Tags, Klassen, IDs und Attribute.
+										Tags beziehen sich auf HTML-Elemente, Klassen und IDs ermöglichen das Styling spezifischer Elemente, und
+										Attribute ermöglichen das Styling basierend auf bestimmten Attributen oder Attributwerten.</p>
+								<pre><code>
+								/* Stil für ein HTML-Tag */
+								p {
+									color: blue;
+								}
+
+								/* Stil für eine Klasse */
+								.myClass {
+									color: red;
+								}
+
+								/* Stil für eine ID */
+								#myId {
+									color: green;
+								}
+
+								/* Stil basierend auf einem Attribut */
+								a[href] {
+									color: purple;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>font-size, font-weight, font-style, line-height</h2>
+								<p>Es gibt verschiedene CSS-Regeln zur Steuerung von Schriftgröße, -gewicht, -stil und -höhe. Wir können
+										diese verwenden, um das Aussehen und die Lesbarkeit unseres Textes zu steuern.</p>
+								<pre><code>
+								p {
+									font-size: 16px;
+									font-weight: bold;
+									font-style: italic;
+									line-height: 1.5;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>dvh, vh, vw, px, rem, em, %</h2>
+								<p>Es gibt verschiedene Einheiten in CSS, die wir verwenden können, um Größen, Abstände und andere Werte zu
+										bestimmen. Einige davon sind absolute Einheiten wie Pixel (px), während andere relative Einheiten sind,
+										wie em, rem, vh, vw und %.</p>
+								<pre><code>
+								/* Absolute Einheit */
+								.box {
+									width: 300px;
+									height: 200px;
+								}
+
+								/* Relative Einheit */
+								.box {
+									width: 50%;
+									height: 50vh;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>min-height, max-height, height (and width)</h2>
+								<p>Wir können die `height`, `min-height` und `max-height` Eigenschaften verwenden, um die Höhe eines
+										Elements zu kontrollieren. Ähnliche Eigenschaften existieren für die Breite: `width`, `min-width` und
+										`max-width`.</p>
+								<pre><code>
+								.box {
+									height: 200px;
+									min-height: 100px;
+									max-height: 300px;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>color, background-color, hex rgba</h2>
+								<p>Die Eigenschaften `color` und `background-color` werden verwendet, um die Farbe des Textes bzw. des
+										Hintergrunds eines Elements zu bestimmen. Wir können verschiedene Farbsysteme verwenden, darunter
+										Hexadezimalcodes und RGB-/RGBA-Farben.</p>
+								<pre><code>
+								.box {
+									color: #000000; /* Schwarz in Hexadezimal */
+									background-color: rgba(255, 0, 0, 0.5); /* Halbtransparentes Rot in RGBA */
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>transitions</h2>
+								<p>Übergänge ermöglichen es uns, Änderungen von CSS-Eigenschaften über eine bestimmte Dauer hinweg sanft
+										statt sofort zu ändern, was zu einem glatteren und ansprechenderen Effekt führt.</p>
+								<pre><code>
+								.box {
+									transition: background-color 0.5s ease-in-out;
+								}
+
+								.box:hover {
+									background-color: red;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>translate</h2>
+								<p>Die `translate` Funktion ist eine 2D-Transformationsmethode, die es uns ermöglicht, ein Element entlang
+										der X- und Y-Achse zu verschieben.</p>
+								<pre><code>
+								.box {
+									transform: translate(50px, 100px);
+								}
+								</code></pre>
+						</section>
+
+            <section>
+                <h2>Transform Beispiele</h2>
+                <p>Hier sind ein paar zusätzliche Beispiele für die Verwendung der CSS-Transformeigenschaft:</p>
+                <pre><code>
+                /* Drehen Sie das Element um 45 Grad */
+                .box {
+                  transform: rotate(45deg);
+                }
+
+                /* Skalieren Sie das Element um das 1,5-fache seiner Originalgröße */
+                .box {
+                  transform: scale(1.5);
+                }
+
+                /* Verschieben Sie das Element um 50 Pixel auf der x-Achse und 100 Pixel auf der y-Achse, und drehen Sie es dann um 30 Grad */
+                .box {
+                  transform: translate(50px, 100px) rotate(30deg);
+                }
+                </code></pre>
+            </section>
+
+						<section>
+								<h2>key-frames</h2>
+								<p>Die `@keyframes` Regel ermöglicht es uns, Animationen zu erstellen, indem wir die CSS-Stile des Elements
+										im Laufe der Zeit ändern.</p>
+								<pre><code>
+								@keyframes myAnimation {
+									0% {
+										background-color: red;
+									}
+
+									50% {
+										background-color: green;
+									}
+
+									100% {
+										background-color: blue;
+									}
+								}
+
+								.box {
+									animation: myAnimation 5s infinite;
+								}
+								</code></pre>
+						</section>
+
+						<section>
+								<h2>filter</h2>
+								<p>Die CSS `filter` Eigenschaft ermöglicht es uns, verschiedene visuelle Effekte auf ein Element anzuwenden,
+										wie zum Beispiel Unschärfe, Helligkeit, Kontrast und vieles mehr.</p>
+								<pre><code>
+								.image {
+									filter: blur(5px);
+								}
+								</code></pre>
+						</section>
+
+            <section>
+                <h2>Filter Beispiele</h2>
+                <p>Hier sind ein paar zusätzliche Beispiele für die Verwendung der CSS-Filtereigenschaft:</p>
+                <pre><code>
+                /* Erhöhen Sie die Helligkeit des Bildes */
+                .image {
+                  filter: brightness(150%);
+                }
+
+                /* Ändern Sie den Kontrast des Bildes */
+                .image {
+                  filter: contrast(200%);
+                }
+
+                /* Wenden Sie einen Sepia-Effekt auf das Bild an */
+                .image {
+                  filter: sepia(100%);
+                }
+                </code></pre>
+            </section>
+
+						<section>
+								<h2>CAN I USE</h2>
+								<p>'Can I use' ist eine Webseite, die Informationen darüber liefert, wie gut verschiedene Web-Technologien
+										von verschiedenen Browsern unterstützt werden. Es ist ein unverzichtbares Tool für jeden
+										Webentwickler.</p>
+								<a href="https://caniuse.com/">Besuchen Sie 'Can I use'</a>
+						</section>
+
+				</section>
+
+        <section>
+
+            <section class="welcome center" data-background-color="#dd1166">
+                <h2>CSS Selektoren</h2>
+            </section>
+
+            <section>
+                <h2>Element-Selektor</h2>
+                <p>Der Element-Selektor wählt Elemente basierend auf dem Elementnamen. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf alle &lt;p&gt;-Elemente zu */
+                p {
+                  color: red;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Klassen-Selektor</h2>
+                <p>Der Klassen-Selektor wählt Elemente basierend auf der Klassen-Attribut. Elemente mit der spezifischen Klasse werden durch den Selektor ausgewählt. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf alle Elemente zu, die die Klasse 'highlight' haben */
+                .highlight {
+                  color: yellow;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>ID-Selektor</h2>
+                <p>Der ID-Selektor wählt Elemente basierend auf der ID-Attribut. Es gibt nur ein Element mit einer bestimmten ID in einem Dokument. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf das Element mit der ID 'special' zu */
+                #special {
+                  color: green;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Pseudo-Klassen Selektor</h2>
+                <p>Pseudo-Klassen sind Schlüsselwörter, die zu einem Selektor hinzugefügt werden, um den Zustand eines Elements auszuwählen. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf ein &lt;a&gt;-Element zu, wenn es mit der Maus überfahren wird */
+                a:hover {
+                  color: purple;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Pseudoelemente-Selektor</h2>
+                <p>Ein Pseudoelemente-Selektor (X::pseudo-element) wählt einen spezifischen Teil eines X-Elements aus. Hier sind ein paar Beispiele:</p>
+                <pre><code>
+                /* Diese Regel fügt ein rotes Quadrat vor jedem &lt;p&gt;-Element ein */
+                p::before {
+                  content: "";
+                  display: inline-block;
+                  width: 10px;
+                  height: 10px;
+                  background-color: red;
+                }
+
+                /* Diese Regel ändert die Farbe der ersten Zeile jedes &lt;p&gt;-Elements */
+                p::first-line {
+                  color: blue;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Attribut-Selektor</h2>
+                <p>Der Attribut-Selektor (X[attr]) wählt alle X-Elemente aus, die ein bestimmtes Attribut haben. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf &lt;a&gt;-Elemente zu, die ein 'href'-Attribut haben */
+                a[href] {
+                  color: purple;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Attributwert-Selektor</h2>
+                <p>Der Attributwert-Selektor (X[attr="value"]) wählt alle X-Elemente aus, deren bestimmtes Attribut einen spezifischen Wert hat. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf &lt;input&gt;-Elemente zu, deren 'type'-Attribut den Wert 'text' hat */
+                input[type="text"] {
+                  background-color: yellow;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Nachbarschafts-Selektor</h2>
+                <p>Der Nachbarschafts-Selektor (X + Y) wählt das nächste Geschwisterelement aus. Es wählt nur das direkt nachfolgende Geschwister-Element aus. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf ein &lt;p&gt;-Element zu, das direkt auf ein anderes &lt;p&gt;-Element folgt */
+                p + p {
+                  color: green;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Kinds-Selektor</h2>
+                <p>Der Kinds-Selektor (X > Y) wählt alle Y aus, die Kind-Elemente von X sind. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf &lt;li&gt;-Elemente zu, die direkte Kinder eines &lt;ul&gt;-Elements sind */
+                ul > li {
+                  color: blue;
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Geschwister-Selektor</h2>
+                <p>Der Geschwister-Selektor (X ~ Y) wählt alle Y aus, die Geschwister von X sind und nach X kommen. Hier ist ein Beispiel:</p>
+                <pre><code>
+                /* Diese Regel trifft auf &lt;h2&gt;-Elemente zu, die Geschwister eines &lt;h1&gt;-Elements sind und nach dem &lt;h1&gt; kommen */
+                h1 ~ h2 {
+                  color: red;
+                }
+                </code></pre>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>PreCompiler SCSS</h2>
+                <p>SCSS (Sassy CSS) ist eine CSS-Präprozessorsprache, die zusätzliche Funktionen wie Verschachtelung, Variablen, Mixins, Vererbung und andere nützliche Funktionen bietet, die in normalem CSS nicht vorhanden sind. Der SCSS-Code wird dann in normales CSS kompiliert, das von Webbrowsern gelesen werden kann.</p>
+            </section>
+
+            <section>
+                <h2>Verschachtelungen</h2>
+                <p>SCSS ermöglicht es Ihnen, Selektoren zu verschachteln, was bedeutet, dass Sie die Beziehung zwischen verschiedenen Elementen in Ihrer HTML-Struktur direkt in Ihrem CSS darstellen können. Dies kann dazu beitragen, Ihren Code sauberer und organisierter zu machen.</p>
+                <pre><code>
+                .parent {
+                  color: blue;
+
+                  .child {
+                    color: red;
+                  }
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Selektoren</h2>
+                <p>SCSS unterstützt alle normalen CSS-Selektoren und fügt einige zusätzliche Funktionen hinzu. Zum Beispiel können Sie den `&` Operator verwenden, um den aktuellen Selektor zu beziehen.</p>
+                <pre><code>
+                a {
+                  color: blue;
+
+                  &:hover {
+                    color: red;
+                  }
+                }
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Funktionen / Mixins</h2>
+                <p>SCSS bietet Funktionen und Mixins, die Ihnen erlauben, wiederverwendbare Styles zu erstellen. Eine Funktion gibt einen Wert zurück und kann in jeder CSS-Regel verwendet werden, während ein Mixin eine Gruppe von CSS-Regeln ist, die Sie in einem Selektor einfügen können.</p>
+                <pre><code>
+                @function calculate-rem($size) {
+                  $rem-size: $size / 16;
+                  @return #{$rem-size}rem;
+                }
+
+                p {
+                  font-size: calculate-rem(32);
+                }
+
+                @mixin transform($property) {
+                  -webkit-transform: $property;
+                  -ms-transform: $property;
+                  transform: $property;
+                }
+
+                .box {
+                  @include transform(rotate(30deg));
+                }
+                </code></pre>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h2>Eure Aufgabe heute:</h2>
+                <p>
+                    Nutzt das HTML von Gestern und fügt sowohl inline styles, den Style Tag und eine externe CSS Datei hinzu.
+                    Versucht ein <code>div</code> Element zu zentrieren.
+                    <br>
+                    Versteht die Unterschiede zwischen den verschiedenen Möglichkeiten. Welche CSS Regel gewinnt wann?
+                    Ansonsten tobt euch aus und macht die Seiten schön.
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <h2>Vielen Dank für deine Aufmerksamkeit!</h2>
+            <p>Joel Maximilian Mai</p>
+        </section>
+    </div>
 </div>
 
 <script src="../dist/reveal.js"></script>
@@ -50,15 +459,15 @@
 <script src="https://kit.fontawesome.com/2365a6ff25.js" crossorigin="anonymous"></script>
 
 <script>
-	// Keyboard options enable presenter stick to work
-	Reveal.initialize({
-		hash: true,
-		keyboard: {
-			39: 'next',
-			37: 'prev'
-		},
-		plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-	});
+  // Keyboard options enable presenter stick to work
+  Reveal.initialize({
+    hash: true,
+    keyboard: {
+      39: 'next',
+      37: 'prev'
+    },
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
 </script>
 </body>
 </html>
