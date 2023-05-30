@@ -2,6 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/network/members)
+[![Excel](https://img.shields.io/badge/-Lehrplan-217346?style=flat&logo=Microsoft-Excel&logoColor=white)](https://iwkoeln-my.sharepoint.com/:x:/g/personal/mai_iwkoeln_de/Ed4zwdLu3q5LosLD3CYGE6cB6GdmXkFSyPvQqKhIOvxmlg?e=nSJRda)
 
 ## 📝 Beschreibung
 
