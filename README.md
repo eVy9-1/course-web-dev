@@ -1,7 +1,7 @@
 # 🔮 Web-Dev Crash Course
 
-[![GitHub stars](https://img.shields.io/github/stars/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Inf166/course-web-dev)](https://github.com/Inf166/course-web-dev/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/mai-space/course-web-dev)](https://github.com/mai-space/course-web-dev/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/mai-space/course-web-dev)](https://github.com/mai-space/course-web-dev/network/members)
 [![Excel](https://img.shields.io/badge/-Lehrplan-217346?style=flat&logo=Microsoft-Excel&logoColor=white)](https://iwkoeln-my.sharepoint.com/:x:/g/personal/mai_iwkoeln_de/Ed4zwdLu3q5LosLD3CYGE6cB6GdmXkFSyPvQqKhIOvxmlg?e=nSJRda)
 
 ## 📝 Beschreibung
@@ -26,7 +26,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 1 - Einführung in Computer und deren Kommunikation miteinander </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-01/)
+[🚀 Zur Präsentation](https://mai-space.github.io/course-web-dev/day-01/)
 
 ## Einführung in die Rechnerarchitektur:
 
@@ -79,7 +79,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 2 - Internet Protokolle und HTML </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-02/)
+[🚀 Zur Präsentation](https://mai-space.github.io/course-web-dev/day-02/)
 
 ## Protokolle (HTTP, SSH, HTTPS, SSL)
 
@@ -121,7 +121,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 3 - Alles hübscher machen mit CSS </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-03/)
+[🚀 Zur Präsentation](https://mai-space.github.io/course-web-dev/day-03/)
 
 ## CSS
 
@@ -149,7 +149,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 4 - Funktionale Webseiten mit JavaScript </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-04/)
+[🚀 Zur Präsentation](https://mai-space.github.io/course-web-dev/day-04/)
 
 ## JavaScript
 
@@ -178,7 +178,7 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 <summary> 🌅Tag 5 - Let's get professional </summary>
 
 
-[🚀 Zur Präsentation](https://inf166.github.io/course-web-dev/day-05/)
+[🚀 Zur Präsentation](https://mai-space.github.io/course-web-dev/day-05/)
 
 ## Datenbanken (SQL)
 
