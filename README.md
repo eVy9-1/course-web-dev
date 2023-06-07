@@ -16,6 +16,15 @@ In diesem Crash Course werden wir uns mit den Grundlagen der Webentwicklung besc
 - [Chrome](https://www.google.com/chrome/)
 - [NodeJS](https://nodejs.org/en/download/)
 
+## 💡 Was mache ich, wenn ich ein Problem habe
+
+1. Tief durchatmen
+2. Problem eingrenzen
+3. Googlen, Foren einträge lesen, versuchen zu verstehen
+4. Lösung anwenden
+5. Funktionierts immernoch nicht?
+6. Dann frag einen Kollegen
+
 ## Legende
 
 - 💫 = optional
