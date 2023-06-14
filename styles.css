@@ -1,11 +1,14 @@
 /* BODY */
 body {
-    font-family: Bahnschrift;
     font-size: 24px;
-    color: black;
-    background-color: #f1f3f5;
-    margin: 0px;
+    font-family: Bahnschrift;
     padding: 0px;
+    margin: 0px;
+    margin-top: 50px;
+}
+
+main {
+    padding-top: 100px;
 }
 
 /* TEXTS */
@@ -19,7 +22,7 @@ p {
 
 /* LINKS */
 a {
-    transition: background-color 0.8s ease-in-out;
+    transition: background-color 0.8s ease-in-out, font-size 0.4s ease-in-out;
     color: #f1f3f5;
     text-decoration: none;
 }
@@ -53,51 +56,40 @@ a:hover {
     right: 0;
 }
 
-.bottommenu {
-    height: 40px;
-    background-color: #415161;
-    text-align: right;
-    overflow: hidden;
-    bottom: 0;
-    width: 100%;
-    position: relative;
-    z-index: 2;
-    padding-bottom: %;
-}
-
 footer {
     font-size: 15px;
-    background-color: black;
+    background-color: #415161;
     width: 100%;
-    color: white;
-    height: 25px;
-    text-align: center;
+    color: #f1f3f5;
     padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    color: #f1f3f5;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* TABELLEN */
 table {
-    vertical-align: top;
-    border: 0px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+    border: 1px solid black;
+    border-color: white;
 }
 
 tr {
-    width: 100%;
 }
 
 td {
-    padding-top: 10px;
-    vertical-align: top;
+    min-width: 50%;
 }
 
 
 /* BILDER */
 img {
     width: 700px;
-    border: 1px solid black;
+    border: 0px solid black;
 }
 
 .copyright {
@@ -106,6 +98,18 @@ img {
 
 nav a {
     margin-right: 20px;
+}
+
+/* Color theme */
+.dark {
+    font-family: Bahnschrift;
+    font-size: 24px;
+    color: black;
+}
+
+.light {
+    font-family: Bahnschrift;
+    font-size: 24px;
 }
 
 
