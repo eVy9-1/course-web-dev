@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
+    <!-- setting meta information  -->
     <meta charset="UTF-8">
     <meta name="description" content="kreative Selbstdarstellungen ...">
     <meta name="keywords" content="portfolio, kreativ, selbstdarstellung, Scheer, Timon, Timon Scheer, Programmierer, ">
     <meta name="author" content="Timon Scheer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Facebook meta Informationen -->
+    <!-- setting facebook meta information -->
     <meta property="og:title" content="that's me - Timon Scheer" />
     <meta property="og:description" content="kreative Selbstdarstellungen ..." />
     <meta property="og:url" content="main.html" />
     <meta property="og:type" content="portfolio" />
 
+    <!-- loading javascript file  -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- loading css file  -->
+    <link rel="stylesheet" href="styles.css">
+
     <title>that's me - Timon Scheer</title>
 
-    <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -23,22 +29,34 @@
 
 <!-- Mein Topmenu -->
 <nav class="topmenu">
-    <a href="what.html">_what</a> | <a href="hobbies.html">_hobbies</a> | <a href="skills.html">_skills</a>
+    <a href="index.html"> _what?</a> |&nbsp<a href="hobbies.html"> _hobbies </a> |&nbsp<a href="skills.html">_skills </a>
 </nav>
 
 <!-- Main Section -->
 <main>
-    <article>
+    <article class="wrapper flow center">
         <img style="width: 400px" src="img\Bewerbungsbild_edited_small.jpg">
         <br>
         <p>
-            Timon<br>
-            Scheer<br><br><br>
+            Timon Scheer<br><br><br>
 
             Frankenforster Str. 149:<br>
             51427 Bergisch Gladbach<br><br>
 
             <a href="mailto: cenaa8@gmx.de" class="dark">cenaa8@gmx.de</a>
+
+            <br><br>
+
+            <h3>Fragen? Anregungen?</h3>
+
+            <form action="mailto:timon.scheer@gmail.com" method="post" enctype="text/plain">
+                Ihr vollständiger Name:                 <br><input type="text" name="Name" size="30"><br><br>
+                Betreff:                                <br><input type="text" name="E-mail" size="40" id="betreff"><br><br>
+                Ihre Anfrage:                           <br><textarea name="Kommentar" style="width: 420px" rows="4"></textarea>
+                <br>
+
+            <input type="submit" value="Senden" onClick="ty();">
+        </form>
         </p>
     </article>
 </main>
@@ -50,7 +68,7 @@
         &copy; Scheer - <a href="mailto:cenaa8@gmx.de">cenaa8@gmx.de</a>
     </p>
     <p style="background-color: #fe070e">
-        <a href="impressum.html">_impressum</a>
+        <a href="impressum.html" style="background-color: #fe070e">_impressum</a>
     </p>
 </footer>
 
