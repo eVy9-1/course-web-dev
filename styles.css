@@ -11,6 +11,7 @@ body {
 /* Abstand zum Bildschirmrand oben */
 main {
     padding-top: 8.0rem;
+    background-image: url('img\1060410.jpg');
 }
 
 /* TEXTS */
@@ -40,6 +41,12 @@ a:hover {
     width: 100%;
     left: 0;
 }
+
+.transparent {
+    background-color: #95737288;
+    opacity: 0.1;
+}
+
 
 
 /* MENUS */

@@ -22,6 +22,29 @@
 
     <title>that's me - Timon Scheer</title>
 
+    <script>
+        function mailMe() {
+
+            var emailsub = document.getElementById('emailsubhtml').value;
+            var emailcc = document.getElementById('emailcchtml').value;
+            var emailbody = document.getElementById('emailbodyhtml').value;
+
+            var emailto = "timon.scheer@gmail.com";
+
+            var mailstring = 'mailto:'+emailto+'?cc='+emailcc+'&subject='+emailsub+'&body='+emailbody;
+
+            // Fragezeichen suchen und ersetzen mit: %3F
+            // Leerzeichen suchen und ersetzen mit: %20
+            mailstring = mailstring.replace(/ /g,'%20');
+            // Linebreaks suchen und ersetzen mit: %0D
+            mailstring = mailstring.replace(/(\r\n|\r|\n)/g, '%0D');
+
+            alert(emailbody);
+            window.open(mailstring, '_self');
+            mailMe.close();
+        }
+    </script>
+
 
 </head>
 
@@ -49,14 +72,16 @@
 
             <h3>Fragen? Anregungen?</h3>
 
-            <form action="mailto:timon.scheer@gmail.com" method="post" enctype="text/plain">
-                Ihr vollständiger Name:                 <br><input type="text" name="Name" size="30"><br><br>
-                Betreff:                                <br><input type="text" name="E-mail" size="40" id="betreff"><br><br>
-                Ihre Anfrage:                           <br><textarea name="Kommentar" style="width: 420px" rows="4"></textarea>
+            <form action="" method="post" enctype="text/plain">
+                Ihre EMail-Adresse:                 <br><input id="emailcchtml" size="30"><br><br>
+                Betreff:                            <br><input id="emailsubhtml" size="40" ><br><br>
+                Inhalt Ihrer EMail:                 <br><textarea id="emailbodyhtml" style="width: 22rem" rows="9"></textarea>
                 <br>
+            </form>
 
-            <input type="submit" value="Senden" onClick="ty();">
-        </form>
+            <button onclick="mailMe()">Abschicken</button>
+
+            <br><br>
         </p>
     </article>
 </main>
@@ -65,7 +90,7 @@
 <!-- Der Footer -->
 <footer>
     <p>
-        &copy; Scheer - <a href="mailto:cenaa8@gmx.de">cenaa8@gmx.de</a>
+        &copy; Scheer - <a href="mailto:timon.scheer@gmail.com">timon.scheer@gmail.com</a>
     </p>
     <p style="background-color: #fe070e">
         <a href="impressum.html" style="background-color: #fe070e">_impressum</a>
