@@ -22,29 +22,6 @@
 
     <title>that's me - Timon Scheer</title>
 
-    <script>
-        function mailMe() {
-
-            var emailsub = document.getElementById('emailsubhtml').value;
-            var emailcc = document.getElementById('emailcchtml').value;
-            var emailbody = document.getElementById('emailbodyhtml').value;
-
-            var emailto = "timon.scheer@gmail.com";
-
-            var mailstring = 'mailto:'+emailto+'?cc='+emailcc+'&subject='+emailsub+'&body='+emailbody;
-
-            // Fragezeichen suchen und ersetzen mit: %3F
-            // Leerzeichen suchen und ersetzen mit: %20
-            mailstring = mailstring.replace(/ /g,'%20');
-            // Linebreaks suchen und ersetzen mit: %0D
-            mailstring = mailstring.replace(/(\r\n|\r|\n)/g, '%0D');
-
-            alert(emailbody);
-            window.open(mailstring, '_self');
-            mailMe.close();
-        }
-    </script>
-
 
 </head>
 
@@ -57,32 +34,38 @@
 
 <!-- Main Section -->
 <main>
-    <article class="wrapper flow center">
-        <img style="width: 400px" src="img\Bewerbungsbild_edited_small.jpg">
-        <br>
-        <p>
-            Timon Scheer<br><br><br>
+    <article class="wrapper flow">
+        <img class="center" style="width: 400px" src="img/Bewerbungsbild_edited_small.jpg" alt="Mein Bewerbungsbild">
 
+        <div class="center">
+            <element>
+            <h4>Timon Scheer</h4>
+
+        <p>
             Frankenforster Str. 149:<br>
             51427 Bergisch Gladbach<br><br>
 
-            <a href="mailto: cenaa8@gmx.de" class="dark">cenaa8@gmx.de</a>
+            <a href="mailto:timon.scheer@gmail.com" class="dark">timon.scheer@gmail.com</a>
+        </p>
+            </element>
+        </div>
 
-            <br><br>
+        <div class="center">
+            <element>
 
-            <h3>Fragen? Anregungen?</h3>
+            <h2>Fragen? Anregungen?</h2><br>
 
             <form action="" method="post" enctype="text/plain">
-                Ihre EMail-Adresse:                 <br><input id="emailcchtml" size="30"><br><br>
-                Betreff:                            <br><input id="emailsubhtml" size="40" ><br><br>
-                Inhalt Ihrer EMail:                 <br><textarea id="emailbodyhtml" style="width: 22rem" rows="9"></textarea>
+                <label for="emailcchtml">Ihre EMail-Adresse:</label><br><input id="emailcchtml" size="30"><br><br>
+                <label for="emailsubhtml">Betreff:</label><br><input id="emailsubhtml" size="40" ><br><br>
+                <label for="emailbodyhtml">Inhalt Ihrer EMail:</label><br><textarea id="emailbodyhtml" style="width: 22rem" rows="9"></textarea>
                 <br>
             </form>
 
             <button onclick="mailMe()">Abschicken</button>
 
-            <br><br>
-        </p>
+            </element>
+        </div>
     </article>
 </main>
 
@@ -90,10 +73,10 @@
 <!-- Der Footer -->
 <footer>
     <p>
-        &copy; Scheer - <a href="mailto:timon.scheer@gmail.com">timon.scheer@gmail.com</a>
+        &copy; <a href="mailto:timon.scheer@gmail.com">Scheer</a>
     </p>
-    <p style="background-color: #fe070e">
-        <a href="impressum.html" style="background-color: #fe070e">_impressum</a>
+    <p>
+        <a href="impressum.html">_impressum</a>
     </p>
 </footer>
 
